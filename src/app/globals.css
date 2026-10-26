@@ -1,26 +1,166 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #030712;
+  --foreground: #f8fafc;
+  --sky-accent: #00f0ff;
+  --sky-blue: #38bdf8;
+  --navy-deep: #030712;
+  --navy-surface: #0b1528;
+  --card-bg: rgba(11, 21, 40, 0.65);
+  --card-border: rgba(56, 189, 248, 0.16);
+  --card-border-hover: rgba(0, 240, 255, 0.45);
+  --glass-glow: rgba(0, 240, 255, 0.12);
+  --hud-line: rgba(56, 189, 248, 0.12);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+.light {
+  --background: #f0f7ff;
+  --foreground: #091325;
+  --sky-accent: #0284c7;
+  --sky-blue: #0ea5e9;
+  --navy-deep: #f8fafc;
+  --navy-surface: #e2eeff;
+  --card-bg: rgba(255, 255, 255, 0.75);
+  --card-border: rgba(2, 132, 199, 0.2);
+  --card-border-hover: rgba(2, 132, 199, 0.55);
+  --glass-glow: rgba(14, 165, 233, 0.15);
+  --hud-line: rgba(14, 165, 233, 0.15);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
+  color-scheme: dark;
+}
+
+html.light {
+  color-scheme: light;
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(3, 7, 18, 0.85);
+}
+
+.light ::-webkit-scrollbar-track {
+  background: rgba(240, 247, 255, 0.85);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(56, 189, 248, 0.3);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 240, 255, 0.6);
+}
+
+/* Glassmorphism primitives */
+.glass-panel {
+  background: var(--card-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--card-border);
+  box-shadow: 0 8px 32px 0 var(--glass-glow);
+}
+
+.glass-panel:hover {
+  border-color: var(--card-border-hover);
+}
+
+.glass-card {
+  position: relative;
+  background: var(--card-bg);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid var(--card-border);
+  box-shadow: 0 4px 24px -1px var(--glass-glow);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card:hover {
+  border-color: var(--card-border-hover);
+  box-shadow: 0 12px 40px -4px var(--glass-glow);
+  transform: translateY(-2px);
+}
+
+/* Aviation Flight Radar Grid Overlay */
+.radar-grid {
+  background-image: 
+    linear-gradient(to right, var(--hud-line) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--hud-line) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+/* Subtle Starfield & Grain */
+.noise-overlay {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+.light .noise-overlay {
+  background-image: radial-gradient(rgba(2, 132, 199, 0.08) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+/* Neon text & glow utility */
+.glow-text {
+  text-shadow: 0 0 20px rgba(0, 240, 255, 0.45);
+}
+
+.light .glow-text {
+  text-shadow: 0 0 16px rgba(2, 132, 199, 0.3);
+}
+
+/* Pulse animation for HUD beacon */
+@keyframes beacon-pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.3;
+    transform: scale(1.4);
+  }
+}
+
+.animate-beacon {
+  animation: beacon-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Hide default cursor on desktop when custom cursor is active */
+@media (pointer: fine) {
+  .custom-cursor-active {
+    cursor: none !important;
+  }
+  .custom-cursor-active a,
+  .custom-cursor-active button,
+  .custom-cursor-active input,
+  .custom-cursor-active textarea {
+    cursor: none !important;
+  }
+}
+
+/* Selection */
+::selection {
+  background: rgba(0, 240, 255, 0.25);
+  color: #ffffff;
+}
+
+.light ::selection {
+  background: rgba(2, 132, 199, 0.25);
+  color: #0369a1;
 }
