@@ -115,8 +115,8 @@ export const portfolioData: PortfolioData = {
       },
       {
         label: "Academic CGPA",
-        value: "9.20",
-        numericValue: 9.2,
+        value: "8.88",
+        numericValue: 8.8,
         suffix: " / 10",
         subtext: "SRM Institute of Science & Technology",
       },
@@ -139,10 +139,10 @@ export const portfolioData: PortfolioData = {
     campus: "Ramapuram",
     location: "Chennai, Tamil Nadu",
     period: "2023 - 2027",
-    cgpa: "9.20 / 10.0",
+    cgpa: "8.88 / 10.0",
     highlights: [
       "Specialization in Artificial Intelligence & Machine Learning algorithms",
-      "Consistently high academic standing with CGPA 9.20",
+      "Consistently high academic standing with CGPA 8.88",
       "Core coursework: Advanced DSA, Machine Learning, DBMS, Operating Systems, Computer Networks",
       "Active participant in technical symposiums, coding competitions, and system design challenges",
     ],
@@ -258,8 +258,8 @@ export const portfolioData: PortfolioData = {
       ],
       techStack: ["Next.js", "TypeScript", "FastAPI", "Python", "Scikit-learn", "Tailwind CSS"],
       metrics: ["Random Forest Ensemble", "Real-time Telemetry", "Interactive Heatmaps", "Sub-second Inference"],
-      githubUrl: "https://github.com/Raj-Dwivedi2005",
-      demoUrl: "https://github.com/Raj-Dwivedi2005",
+      githubUrl: "https://github.com/Raj-Dwivedi2005/hydroguard-ai",
+      demoUrl: "https://hydroguard-ai.vercel.app/dashboard",
       category: "AI/ML",
       highlights: [
         "Multi-variable flood risk estimation",
@@ -284,7 +284,7 @@ export const portfolioData: PortfolioData = {
       ],
       techStack: ["Next.js", "TypeScript", "FastAPI", "Python", "Tailwind CSS", "REST APIs"],
       metrics: ["Multi-attribute Comparison", "Carbon Offset Calculator", "Trade-off Matrices", "FastAPI Service"],
-      githubUrl: "https://github.com/Raj-Dwivedi2005",
+      githubUrl: "https://github.com/Raj-Dwivedi2005/EcoPackAI",
       demoUrl: "https://github.com/Raj-Dwivedi2005",
       category: "Full-Stack",
       highlights: [
@@ -310,7 +310,7 @@ export const portfolioData: PortfolioData = {
       ],
       techStack: ["Python", "Pandas", "NumPy", "Scikit-learn", "NLP libraries", "FastAPI", "Streamlit"],
       metrics: ["Perplexity & Burstiness", "Confidence Scoring", "Sentence Breakdown", "FastAPI Engine"],
-      githubUrl: "https://github.com/Raj-Dwivedi2005",
+      githubUrl: "https://github.com/Raj-Dwivedi2005/ai-text-detector",
       demoUrl: "https://github.com/Raj-Dwivedi2005",
       category: "NLP",
       highlights: [
