@@ -21,7 +21,7 @@ export const projects: Project[] = [
       "Terraform",
     ],
     github: "https://github.com/Raj-Dwivedi2005/hydroguard-ai",
-    liveDemo: undefined,
+    liveDemo: "https://hydroguard-ai.vercel.app/dashboard",
     hasScreenshots: true,
     sections: [
       {
