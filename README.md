@@ -5,7 +5,7 @@ A premium, award-worthy personal portfolio website engineered for **Raj Dwivedi*
 Aviation and aerospace-inspired design featuring a fixed scroll-driven 3D commercial airliner WebGL canvas, real-time cursor bubble emitter with particle physics and pop bursts, glassmorphism HUD telemetry, Lenis smooth scrolling, and dark/light modes.
 
 ---
-
+🔗 Live Public Demo: https://portfolio1-ten-jade-37.vercel.app/
 ## Key Features
 
 1. **Scroll-Driven 3D Airplane Canvas (Three.js WebGL)**:
